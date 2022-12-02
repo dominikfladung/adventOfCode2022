@@ -24,12 +24,12 @@ public class Day1Test : IDayTest
     [Test]
     public void Part2Test()
     {
-        Assert.That(GetDay().Part2(Day.GetPuzzleInput("1.txt")), Is.EqualTo(1743));   
+        Assert.That(GetDay().Part2(Day.GetPuzzleInput("1.txt")), Is.EqualTo(200945));   
     }
 
     [Test]
     public void Part2SampleTest()
     {
-        Assert.That(GetDay().Part2(Day.GetPuzzleInput("1_sample.txt")), Is.EqualTo(200945));
+        Assert.That(GetDay().Part2(Day.GetPuzzleInput("1_sample.txt")), Is.EqualTo(45000));
     }
 }
