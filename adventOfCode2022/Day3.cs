@@ -20,7 +20,7 @@ public class Day3 : Day
         }
     }
 
-    Day3()
+    public Day3()
     {
         InitPriorities();
     }
@@ -94,7 +94,7 @@ public class Day3 : Day
         {
             rucksacks.Add(new Rucksack(row));
             
-            if (counter % 3 == 0)
+            if (counter != 0 && (counter + 1) % 3 == 0)
             {
                 groups.Add(new RucksackGroup(rucksacks));
                 rucksacks = new List<Rucksack>();
@@ -103,8 +103,8 @@ public class Day3 : Day
             counter++;
         }
 
-        var chars = groups.Select(group => group.GetUsedCharInAllRucksacks());
-        var priorities = chars.Select(c => priorityValues[c]);
-        return chars.Select(c => priorityValues[c]).Sum();
+        var chars = groups.Select(group => group.GetUsedCharInAllRucksacks()).ToList();
+        var priorities = chars.Select(c => priorityValues[c ?? 'a']);
+        return priorities.Sum();
     }
 }
