@@ -9,7 +9,8 @@ public abstract class Day
 
     public static string[] GetPuzzleInput(string fileName)
     {
-        var path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty, @"../../../inputs/" + fileName);
+        var path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty,
+            @"../../../inputs/" + fileName);
         var fullPath = Path.Combine(Directory.GetCurrentDirectory(), path);
         return File.ReadAllLines(fullPath);
     }
@@ -18,14 +19,23 @@ public abstract class Day
     {
         return Array.ConvertAll(array, int.Parse);
     }
-    
+
     public static int[] ToInt(IEnumerable<string> list)
     {
         return list.Select(int.Parse).ToArray();
     }
-    
+
     public static int BinaryToInt(string binaryString)
     {
         return Convert.ToInt32(binaryString, 2);
     }
+
+    public static string IntToBinary(int number)
+    {
+        return Convert.ToString(number, 2);
+    }
+
+    protected static char[] alphabet = "abcdefghijklmnopqrstuvwxyz".ToCharArray();
+
+    protected static char[] alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
 }
