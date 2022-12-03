@@ -60,19 +60,12 @@ public class Day3 : Day
 
         public char? GetUsedCharInAllRucksacks()
         {
-            var firstRucksack = rucksacks.First().allItems.ToArray();
-            var secondRucksack = rucksacks.Skip(1).First().allItems.ToArray();
-            var thirdRucksack = rucksacks.Skip(2).First().allItems.ToArray();
-            
-            foreach (var a in firstRucksack)
+            var possibleChars = rucksacks.First().allItems;
+            foreach (var rucksack in rucksacks)
             {
-                if ((from b in secondRucksack from c in thirdRucksack where a == b && b == c select b).Any())
-                {
-                    return a;
-                }
+                possibleChars = possibleChars.Intersect(rucksack.allItems);
             }
-
-            return null;
+            return possibleChars.First();
         }
     }
     
