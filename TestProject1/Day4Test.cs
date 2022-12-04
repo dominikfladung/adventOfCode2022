@@ -12,13 +12,13 @@ public class Day4Test : IDayTest
     [Test]
     public void Part1Test()
     {
-        Assert.That(GetDay().Part1(Day.GetPuzzleInput("4.txt")), Is.EqualTo(7766));
+        Assert.That(GetDay().Part1(Day.GetPuzzleInput("4.txt")), Is.EqualTo(534));
     }
 
     [Test]
     public void Part1SampleTest()
     {
-        Assert.That(GetDay().Part1(Day.GetPuzzleInput("4_sample.txt")), Is.EqualTo(157));
+        Assert.That(GetDay().Part1(Day.GetPuzzleInput("4_sample.txt")), Is.EqualTo(2));
     }
 
     [Test]
@@ -30,6 +30,6 @@ public class Day4Test : IDayTest
     [Test]
     public void Part2SampleTest()
     {
-        Assert.That(GetDay().Part2(Day.GetPuzzleInput("4_sample.txt")), Is.EqualTo(70));
+        Assert.That(GetDay().Part2(Day.GetPuzzleInput("4_sample.txt")), Is.EqualTo(4));
     }
 }
