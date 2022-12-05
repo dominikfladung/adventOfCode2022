@@ -11,6 +11,9 @@
     &lt;TestAncestor&gt;&#xD;
       &lt;TestId&gt;NUnit3x::1F393CBB-5339-4961-A710-75DB4DDD596F::net6.0::TestProject1.Day2Test&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::1F393CBB-5339-4961-A710-75DB4DDD596F::net6.0::TestProject1.Day4Test&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::1F393CBB-5339-4961-A710-75DB4DDD596F::net6.0::TestProject1.Day5Test.Part1SampleTest&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::1F393CBB-5339-4961-A710-75DB4DDD596F::net6.0::TestProject1.Day5Test.Part1Test&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
+    &lt;ProjectFile&gt;1F393CBB-5339-4961-A710-75DB4DDD596F/f:Day5Test.cs&lt;/ProjectFile&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
