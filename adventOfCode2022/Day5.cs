@@ -78,25 +78,23 @@ public class Day5 : Day
         ).ToList();
     }
 
-    public override int Part1(string[] puzzleInput)
+    public override object Part1(string[] puzzleInput)
     {
         var stacks = GetStacks(puzzleInput);
         var procedures = GetRearrangementProcedures(puzzleInput, stacks);
         foreach (var rearrangementProcedure in procedures) rearrangementProcedure.Process();
 
         var result = stacks.Select(stack => stack.Pop().Value).ToList();
-        Console.WriteLine(Join(Empty, result));
-        return 0;
+        return Join(Empty, result);
     }
 
-    public override int Part2(string[] puzzleInput)
+    public override object Part2(string[] puzzleInput)
     {
         var stacks = GetStacks(puzzleInput);
         var procedures = GetRearrangementProcedures(puzzleInput, stacks);
         foreach (var rearrangementProcedure in procedures) rearrangementProcedure.ProcessMultiple();
 
         var result = stacks.Select(stack => stack.Pop().Value).ToList();
-        Console.WriteLine(Join(Empty, result));
-        return 0;
+        return Join(Empty, result);
     }
 }

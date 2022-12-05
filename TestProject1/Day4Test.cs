@@ -24,7 +24,7 @@ public class Day4Test : IDayTest
     [Test]
     public void Part2Test()
     {
-        Assert.That(GetDay().Part2(Day.GetPuzzleInput("4.txt")), Is.EqualTo(2415));   
+        Assert.That(GetDay().Part2(Day.GetPuzzleInput("4.txt")), Is.EqualTo(841));   
     }
 
     [Test]

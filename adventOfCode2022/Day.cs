@@ -4,8 +4,8 @@ namespace adventOfCode2022;
 
 public abstract class Day
 {
-    public abstract int Part1(string[] puzzleInput);
-    public abstract int Part2(string[] puzzleInput);
+    public abstract object Part1(string[] puzzleInput);
+    public abstract object Part2(string[] puzzleInput);
 
     public static string[] GetPuzzleInput(string fileName)
     {

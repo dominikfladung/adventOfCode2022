@@ -44,14 +44,14 @@ public class Day4 : Day
         }
     }
     
-    public override int Part1(string[] puzzleInput)
+    public override object Part1(string[] puzzleInput)
     {
         var pairs = puzzleInput.Select(x => new ElvePair(x));
         var count = pairs.Count(x => x.IsElve1FullInRange() || x.IsElve2FullInRange());
         return count;
     }
 
-    public override int Part2(string[] puzzleInput)
+    public override object Part2(string[] puzzleInput)
     {
         var pairs = puzzleInput.Select(x => new ElvePair(x));
         var count = pairs.Count(x => x.IsOverlap());

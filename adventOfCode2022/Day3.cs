@@ -69,7 +69,7 @@ public class Day3 : Day
         }
     }
     
-    public override int Part1(string[] puzzleInput)
+    public override object Part1(string[] puzzleInput)
     {
         var rucksacks = puzzleInput.Select(row => new Rucksack(row));
         var items = rucksacks.Select(rucksack => rucksack.GetItemInBothCompartments());
@@ -77,7 +77,7 @@ public class Day3 : Day
         return priorities.Sum();
     }
 
-    public override int Part2(string[] puzzleInput)
+    public override object Part2(string[] puzzleInput)
     {
         var counter = 0;
         var groups = new List<RucksackGroup>();

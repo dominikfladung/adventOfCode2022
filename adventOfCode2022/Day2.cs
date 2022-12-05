@@ -109,12 +109,12 @@ public class Day2 : Day
     
     
 
-    public override int Part1(string[] puzzleInput)
+    public override object Part1(string[] puzzleInput)
     {
         return puzzleInput.Select(row => new Round(row).Play()).Sum();
     }
 
-    public override int Part2(string[] puzzleInput)
+    public override object Part2(string[] puzzleInput)
     {
         return puzzleInput.Select(row => new RoundPart2(row).Play()).Sum();
     }

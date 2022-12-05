@@ -38,14 +38,14 @@ public class Day1 : Day
         return elves;
     }
 
-    public override int Part1(string[] puzzleInput)
+    public override object Part1(string[] puzzleInput)
     {
         var elves = GetElves(puzzleInput);
         return elves.Select(e => e.SumOfCalories()).Max();
     }
 
 
-    public override int Part2(string[] puzzleInput)
+    public override object Part2(string[] puzzleInput)
     {
         var elves = GetElves(puzzleInput);
         var top3Elves = elves.Select(e => e.SumOfCalories()).OrderByDescending(i => i).Take(3);
