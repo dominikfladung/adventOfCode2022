@@ -38,8 +38,16 @@ public abstract class Day
     protected static char[] alphabet = "abcdefghijklmnopqrstuvwxyz".ToCharArray();
 
     protected static char[] alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-    
-    public static IEnumerable<string> Chunk(string str, int n)
+
+    protected static IEnumerable<string[]> Chunk(string[] array, int chunkSize)
+    {
+        for (var i = 0; i < array.Length; i += chunkSize)
+        {
+            yield return array.Skip(i).Take(chunkSize).ToArray();
+        }
+    }
+
+    protected static IEnumerable<string> Chunk(string str, int n)
     {
         if (string.IsNullOrEmpty(str) || n < 1) {
             throw new ArgumentException("String is Empty");
